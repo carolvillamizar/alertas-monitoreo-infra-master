@@ -766,6 +766,37 @@ module "sa1ht6cvsvss2lc_sesiones" {
   tags                = var.sa1ht6cvsvss2lc_sesiones.tags
 }
 
+module "saz7fvbeabo0u8_sesiones" {
+  source = "./modules/cloudwatch/metric_alarm"
+
+  name                = "${var.saz7fvbeabo0u8_sesiones.name}"
+  alarm_description   = var.saz7fvbeabo0u8_sesiones.alarm_description
+  actions_enabled     = var.saz7fvbeabo0u8_sesiones.actions_enabled
+  alarm_actions       = var.saz7fvbeabo0u8_sesiones.alarm_actions
+  evaluation_periods  = var.saz7fvbeabo0u8_sesiones.evaluation_periods
+  datapoints_to_alarm = var.saz7fvbeabo0u8_sesiones.datapoints_to_alarm
+  threshold           = var.saz7fvbeabo0u8_sesiones.threshold
+  comparison_operator = var.saz7fvbeabo0u8_sesiones.comparison_operator
+  treat_missing_data  = var.saz7fvbeabo0u8_sesiones.treat_missing_data
+  metric_query        = var.saz7fvbeabo0u8_sesiones.metric_query
+  tags                = var.saz7fvbeabo0u8_sesiones.tags
+}
+module "saz7fvbeabo0u8_cpu" {
+  source = "./modules/cloudwatch/metric_alarm"
+
+  name                = "${var.saz7fvbeabo0u8_cpu.name}"
+  alarm_description   = var.saz7fvbeabo0u8_cpu.alarm_description
+  actions_enabled     = var.saz7fvbeabo0u8_cpu.actions_enabled
+  alarm_actions       = var.saz7fvbeabo0u8_cpu.alarm_actions
+  evaluation_periods  = var.saz7fvbeabo0u8_cpu.evaluation_periods
+  datapoints_to_alarm = var.saz7fvbeabo0u8_cpu.datapoints_to_alarm
+  threshold           = var.saz7fvbeabo0u8_cpu.threshold
+  comparison_operator = var.saz7fvbeabo0u8_cpu.comparison_operator
+  treat_missing_data  = var.saz7fvbeabo0u8_cpu.treat_missing_data
+  metric_query        = var.saz7fvbeabo0u8_cpu.metric_query
+  tags                = var.saz7fvbeabo0u8_cpu.tags
+}
+
 ################## ECS ###############
 
 module "ecs_tienda_front" {

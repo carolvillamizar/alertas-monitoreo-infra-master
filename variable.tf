@@ -193,6 +193,12 @@ variable "sa1ht6cvsvss2lc_cpu"{
 variable "sa1ht6cvsvss2lc_sesiones"{
   type = any
 }
+variable "saz7fvbeabo0u8_sesiones"{
+  type = any
+}
+variable "saz7fvbeabo0u8_cpu"{
+  type = any
+}
 
 ################## ECS #################
 

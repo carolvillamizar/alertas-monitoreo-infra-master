@@ -1884,6 +1884,80 @@ sa1ht6cvsvss2lc_sesiones = {
   }
 }
 
+saz7fvbeabo0u8_cpu  = {
+  name                = "[RDS] saz7fvbeabo0u8 Exceso en el porcentaje de utilización de la CPU"
+  alarm_description   = "\n[RDS] saz7fvbeabo0u8 Exceso en el porcentaje de utilización de la CPU\nAccount ID: 982536497151\nTeam:DbaCloud \nActivo:DataBase"
+  actions_enabled     = true
+  alarm_actions       = ["arn:aws:sns:us-east-1:451426614987:opsgenie"]
+  evaluation_periods  = 3
+  datapoints_to_alarm = 3
+  threshold           = 80
+  comparison_operator = "GreaterThanThreshold"
+  treat_missing_data  = "missing"
+
+  metric_query = {
+    id          = "m1"
+    account_id  = "982536497151"
+    return_data = true
+
+    metric = {
+      metric_name = "CPUUtilization"
+      namespace   = "AWS/RDS"
+      stat        = "Average"
+      period      = 600
+      dimensions = {
+      DBInstanceIdentifier = "saz7fvbeabo0u8"
+      }
+    }
+  }
+
+  tags = {
+    Platform = "Portal–SegurosBolivar"
+    Activo = "DataBase"
+    Component = "Aws"
+    Category = "Proactiva"
+    Type = "Performance"
+    Team = "DbaCloud"
+  }
+}
+
+saz7fvbeabo0u8_sesiones = {
+  name                = "[RDS] saz7fvbeabo0u8 Exceso en el número de conexiones en uso"
+  alarm_description   = "\n[RDS] saz7fvbeabo0u8 Exceso en el número de conexiones en uso \nAccount ID: 982536497151\nTeam:DbaCloud \nActivo:DataBase"
+  actions_enabled     = true
+  alarm_actions       = ["arn:aws:sns:us-east-1:451426614987:opsgenie"]
+  evaluation_periods  = 3
+  datapoints_to_alarm = 3
+  threshold           = 20
+  comparison_operator = "GreaterThanThreshold"
+  treat_missing_data  = "missing"
+
+  metric_query = {
+    id          = "m1"
+    account_id  = "982536497151"
+    return_data = true
+
+    metric = {
+      metric_name = "DatabaseConnections"
+      namespace   = "AWS/RDS"
+      stat        = "Average"
+      period      = 600
+      dimensions = {
+      DBInstanceIdentifier = "saz7fvbeabo0u8"
+      }
+    }
+  }
+
+  tags = {
+    Platform = "Portal–SegurosBolivar"
+    Activo = "DataBase"
+    Component = "Aws"
+    Category = "Proactiva"
+    Type = "Performance"
+    Team = "DbaCloud"
+  }
+}
+
 
 ################## ECS #################
 

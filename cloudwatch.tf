@@ -797,7 +797,7 @@ module "saz7fvbeabo0u8_cpu" {
   tags                = var.saz7fvbeabo0u8_cpu.tags
 }
 
-################## ECS ###############
+################## ECS ##############
 
 module "ecs_tienda_front" {
   source = "./modules/cloudwatch/metric_alarm"
